@@ -1,8 +1,8 @@
-**Either download the exe file(least hassle) or download the password_manager.cpp and 
+**Either download the exe file(least hassle , no g++ required) or download the password_manager.cpp and 
 In CMD/Powershell do the following**
 --------------------------------------------
 >[!important]
->To run the app , g++ must be installed . . .
+>To run the app by 2bd approach, g++ must be installed . . .
 
 
 
