@@ -22,20 +22,20 @@ int main()
     system("cls");
     while (true)
     {
-        cout << "------INPUT MODE-------" << endl;
-        cout << "-----------------------------------------------------" << endl;
-        cout << "---TYPE u TO USE A FILE " << endl;
+        cout << "------Main Menu-------" << endl;
+        cout << "----------------------------------------------------enter mmm for user manual--" << endl;
+        cout << "-> use file :              u" << endl;
         cout<<endl;
-        cout << "---PRESS ENTER TO GO TO FILE CREATION WINDOW" << endl;
+        cout << "-> creating a file / previous page : enter " << endl;
         cout<<endl;
-        cout << "---TYPE d TO GO TO FILE DELETION WINDOW" << endl;
+        cout << "-> delete a file :         d" << endl;
         cout<<endl;
-        cout << "---TYPE o TO GO TO SEE CONTENTS OF A FILE" << endl;
+        cout << "-> open file :             o" << endl;
         cout<<endl;
-        cout << "---TYPE t TO VIEW ALL THE DOCUMENTS" << endl;
+        cout << "-> view all created files: t" << endl;
         cout<<endl;
-        cout << "---TYPE e TO EXIT THE APP" << endl;
-        cout << "-----------------------------------------------------" << endl;
+        cout << "-> exit :                  e" << endl;
+        cout << "------------------------------------------------------------------------------" << endl;
         cout << "                                                      " << endl;
         cout << "Input Operation: ";
 
@@ -44,12 +44,12 @@ int main()
         if (basic == "u")
         {
             system("cls");
-            cout << "Type the file name to be used , enter back to go to main menu" << endl;
-            cout << "----------------------------------------------------------------" << endl;
+            cout << "Type the file name to be used , press enter to go to main menu" << endl;
+            cout << "------------------------------------------------------------------------------" << endl;
             string filename;
             getline(cin, filename);
             map<string, string> table;
-            if (filename == "back")
+            if (filename == "")
             {
                 system("cls");
             }
@@ -60,13 +60,13 @@ int main()
                 {
                     system("cls");
                     cout << "opened and using " << filename << endl;
-                    cout << "-----------------------------------------------------" << endl;
-                    cout << "Type b to go to main menu , type s to show the currently saved key and values " << endl;
+                    cout << "------------------------------------------------------------------------------" << endl;
+                    cout << "press enter to go to main menu , type s to show the currently saved key and values " << endl;
                     string appp;
                     string passwor;
                     cout << "App name->";
                     getline(cin, appp);
-                    if (appp == "b")
+                    if (appp == "")
                     {
                         filename=filename; 
                         savefeature(table, filename);
@@ -77,7 +77,7 @@ int main()
                     {
                         string buff;
                         system("cls");
-                        cout << "-------------------------" << endl;
+                        cout << "------------------------------------------------------------------------------" << endl;
                         map<string, string>::iterator it = table.begin();
 
                         while (it != table.end())
@@ -85,8 +85,8 @@ int main()
                             cout << it->first << " --> " << it->second << endl;
                             it++;
                         }
-                         cout << "-------------------------" << endl;
-                          cout << "Type b to get back at insert mode" << endl;
+                         cout << "------------------------------------------------------------------------------" << endl;
+                          cout << "press enter to get back at insert mode" << endl;
                         getline(cin, buff);
                         system("cls");
                     }
@@ -104,6 +104,49 @@ int main()
         {
             system("cls");
             system("tree /f /a");
+             cout << "------------------------------------------------------------------------------" << endl;
+        cout<<"Files that contain password are of the format {filename}.txt"<<endl;
+            string entering;
+           getline(cin,entering);
+       
+           if (entering==""){
+            system("cls");
+           }else{
+
+           }
+        }else if(basic=="mmm"){
+            system("cls");
+           
+            cout<<"This is the user manual of the password manager app.If your are  "<<endl;
+            cout<<"new to the app, please create a .txt file first for initial use (press enter).  "<<endl;
+            cout<<"Then use the file by typing u and enter, thus the selected file    "<<endl;
+            cout<<"will be chosen and you can work on that. If you want to create another file "<<endl;
+            cout<<"you can repeat the same steps.You can the . . .  "<<endl;
+          
+        cout << "------------------------------------------------------------------------------" << endl;
+            cout << "-> type u to select a file and write over it " << endl;
+        cout<<endl;
+        cout << "-> press enter on main menu to create a file" << endl;
+        cout<<endl;
+        cout << "-> enter d do go to file deletion window " << endl;
+        cout<<endl;
+        cout << "-> enter o to see saved passwords in a file  " << endl;
+        cout<<endl;
+        cout << "-> enter t to see all the files" << endl;
+        cout<<endl;
+        cout << "-> enter e to exit the app" << endl;
+        cout<<endl;
+        cout << "-> press enter to get back to the previous page" << endl;
+        cout << "------------------------------------------------------------------------------" << endl;
+         string entering;
+           getline(cin,entering);
+           if (entering==""){
+            system("cls");
+           }else{
+
+           }
+
+
         }
         else if (basic == "e")
         {
@@ -111,18 +154,21 @@ int main()
             break;
         }else if(basic=="o"){
             system("cls");
-            cout<<"Type name of the file to view its contents,enter back to go b to the main menu"<<endl;
-             cout<<"--------------------------------------------------------------------------------"<<endl;
+            cout<<"Type name of the file to view its contents, press enter to go b to the main menu"<<endl;
+            cout << "------------------------------------------------------------------------------" << endl;
             string filetobeopened;
             getline(cin,filetobeopened);
             
             ifstream in(filetobeopened);
             string output;
             output="0";
-            if(filetobeopened=="b"){
+            if(filetobeopened==""){
                 system("cls");
                 
-            }else{
+            }else if(filetobeopened==""){
+
+            }
+            else{
             system("cls");
             while(output.size()!=0){
 
@@ -135,10 +181,10 @@ int main()
         {
             system("cls");
             string deletefile;
-            cout << "Type file name to be deleted,type b to go to main menu" << endl;
-            cout << "------------------------------" << endl;
+            cout << "Type file name to be deleted, press enter to go to main menu" << endl;
+            cout << "------------------------------------------------------------------------------" << endl;
             getline(cin, deletefile);
-            if (deletefile == "b")
+            if (deletefile == "")
             {
                 system("cls");
             }
@@ -153,10 +199,10 @@ int main()
             system("cls");
             string createfile;
             cout << "FILE CREATION MODE" << endl;
-            cout << "------------------------------------------------- " << endl;
-            cout << "ENter the name of the file to be created, type b to get out of file creation mode " << endl;
+           cout << "------------------------------------------------------------------------------" << endl;
+            cout << "Enter the name of the file to be created, press enter to get out of file creation mode " << endl;
             getline(cin, createfile);
-            if (createfile == "b")
+            if (createfile == "")
             {
                 system("cls");
             }
@@ -171,3 +217,4 @@ int main()
         }
     }
 }
+
