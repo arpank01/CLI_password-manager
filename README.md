@@ -2,7 +2,7 @@
 In CMD/Powershell do the following**
 --------------------------------------------
 >[!important]
->To run the app by 2bd approach, g++ must be installed . . .
+>To run the app by 2nd approach, g++ must be installed . . .
 
 
 
