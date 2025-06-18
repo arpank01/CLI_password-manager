@@ -1,3 +1,6 @@
+>[!important]
+>Please keep the exe or cpp file in a seperate blank folder. . . 
+
 **Either download the exe file(least hassle , no g++ required) or download the password_manager.cpp and 
 In CMD/Powershell do the following**
 --------------------------------------------
