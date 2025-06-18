@@ -115,6 +115,7 @@ int main()
             }
             else
             {
+                system("cls");
             }
         }
         else if (basic == "mmm")
@@ -150,6 +151,7 @@ int main()
             }
             else
             {
+                system("cls");
             }
         }
         else if (basic == "e")
@@ -192,6 +194,7 @@ int main()
             {
                 system("cls");
                 cout << "No file found! press enter to go back. " << endl;
+                cout << "------------------------------------------------------------------------------" << endl;
                 string entering;
                 getline(cin, entering);
                 if (entering == "")
@@ -200,6 +203,7 @@ int main()
                 }
                 else
                 {
+                    system("cls");
                 }
             }
         }
@@ -243,5 +247,3 @@ int main()
         }
     }
 }
-
-
